@@ -2,6 +2,7 @@ import fs from "fs" ;
 import jsonPrint from "json-beautify" ;
 const staticDescription = "./static.json" ;
 const testDescription = "./hadoc.json" ;
+const rootFolderTestSuite = "./testSuite/" ;
 const target = "../dist/autograding.json" ;
 const referencePandora = "referencePandora.jar" ;
 let autogradingTests = { tests: [] } ;
@@ -36,9 +37,10 @@ class AutoGradingTest {
     this.name = name ;
     this.setup = `mkdir -p ${ destFolder } ` ;
     this.run = `\
-java -jar ${ referencePandora } ${ optionLine } ${ testFile } &> ${ destFolder }/expected ;
-java -jar pandora.jar ${ optionLine } ${ testFile } &> ${ destFolder }/output   ;
+java -jar target/${ referencePandora } ${ optionLine } ${ rootFolderTestSuite }${ testFile } &> ${ destFolder }/expected ;
+java -jar target/pandora.jar ${ optionLine } ${ rootFolderTestSuite }${ testFile } &> ${ destFolder }/output   ;
 diff -qs -iBbd --strip-trailing-cr ${ destFolder }/expected ${ destFolder }/output &> ${ destFolder }/diff ;
+cat ${ destFolder }/diff >> __autograding/result.txt ;
 cat ${ destFolder }/diff ;
 ` ;
     this.input = "" ;

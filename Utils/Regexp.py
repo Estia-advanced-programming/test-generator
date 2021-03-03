@@ -10,7 +10,7 @@ Created on 2 Mar 2020
 import re
 
 
-re_flight_id = re.compile("^(.*?),.*?,Type\=Air\+FixedWing,Name=(.*?),", re.M)
+re_flight_id = re.compile("^(.*?),.*?,Type\=Air\+FixedWing,.*?Name=(.*?),", re.M)
 def GetFlightsIDs(s):
     return re.findall(re_flight_id, s)
 

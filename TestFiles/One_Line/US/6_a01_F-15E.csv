@@ -1,0 +1,14 @@
+flight id:a01
+flight code:F-15E
+origin:US
+date:2011-06-01
+from:vaziani
+to:mozdok
+motor(s):2
+mass aircraft:37637
+mass fuel:37637
+lift coef:1.6723900635573576
+drag coef:0.01254232652701665
+
+timestamp,longitude,latitude,altitude,roll,pitch,yaw,u,v,heading,air_speed,engine_0,engine_1,temperature_in,humidity_in,pressure_in,heart_rate,oxygen_mask
+1306895685.8,5.6689504,4.76281,7250.2955076,0.0,0.6,46.7,1699004.31946,-406560.7413564,-1.0,497.0143987844907,61013.50981861694,61013.50981861694,300.79744261946126,0.0761374044917106,3.667585174998004,84.59999999999998,0.43781633565952044

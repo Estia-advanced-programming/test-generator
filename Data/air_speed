@@ -12,4 +12,9 @@
 	{"speed": [6, 12, 10, 14]
 	, "direction": [328, 328, 36, 57]
 	}
+	,
+  "..\\Samples\\Tacview-2021-normal.txt.acmi": 
+	{"speed": [7, 8, 11, 5]
+	, "direction": [71, 243, 36, 160]
+	}
 }

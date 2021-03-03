@@ -41,6 +41,7 @@ if __name__ == '__main__':
     f = open(c.PATH_RESOURCES + "\\" + c.ACMI_FILE)
     s = f.read()
     flights = r.GetFlightsIDs(s)
+    print(flights)
     start_tstp = datetime.strptime(r.GetInitialTimestamp(s[0:500]), '%Y-%m-%dT%H:%M:%SZ')
     f.close()
     

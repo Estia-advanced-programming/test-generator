@@ -1,0 +1,14 @@
+flight id:901
+flight code:F-16A
+origin:US
+date:2011-06-01
+from:nalchik
+to:krymsk
+motor(s):1
+mass aircraft:19518
+mass fuel:19518
+lift coef:2.2203235305245417
+drag coef:0.01657331436821066
+
+timestamp,longitude,latitude,altitude,roll,pitch,yaw,u,v,heading,air_speed,engine_0,temperature_in,humidity_in,pressure_in,heart_rate,oxygen_mask
+1306894324.79,5.9778187,4.455528,8533.136756,-0.0,9.4,86.3,1791430.3066695998,-510819.8326192,-1.0,300.6726779732522,63587.16039027725,298.78932666377864,0.07352980098777116,3.5171046895483067,90.2,0.5091399046251734

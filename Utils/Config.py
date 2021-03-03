@@ -19,8 +19,9 @@ from Utils import DataGenerator as dg
 # where is the script being run
 PATH_RESOURCES = os.path.dirname(os.path.realpath(os.path.join(os.getcwd(), os.path.expanduser(__file__))))
 # the acmi file to parse
-ACMI_FILE = "..\\Samples\\10_normal_flights.txt.acmi"
+# ACMI_FILE = "..\\Samples\\10_normal_flights.txt.acmi"
 # ACMI_FILE = "..\\Samples\\10_meteo_bad__flights.txt.acmi"
+ACMI_FILE = "..\\Samples\\Tacview-2021-normal.txt.acmi"
 
 # the folder in which writing the resulting test files
 OUT_FOLDER = "..\\TestFiles"
@@ -40,7 +41,7 @@ BIG_INT = [10, "Big_Int"]
 ASCII = [11, "Ascii"]
 CORRUPTED_BINARY = [12, 'Corrupted_Binary']
 
-CURRENT_CONDITION = CORRUPTED_BINARY
+CURRENT_CONDITION = ASCII
 num_condition = CURRENT_CONDITION[0]
 
 

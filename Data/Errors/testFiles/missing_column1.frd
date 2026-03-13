@@ -1,0 +1,18 @@
+flight id:201
+flight code:MiG-23MLD
+origin:RU
+date:2011-06-01
+from:sochi-adler
+to:mozdok
+motor(s):1
+mass aircraft:10550.096328
+mass fuel:10550.096328
+lift coef:1.9060340730520209
+drag coef:0.012773573396515615
+
+timestamp,latitude,altitude,roll,pitch,yaw,heading,air_speed,engine_0,temperature_in,humidity_in,pressure_in,heart_rate,oxygen_mask
+1306893631.74,3.6329568,466.74,-1.0,1.3,-1.0,-1.0,74.83708283736742,7830065.567222012,22.18726171237271,7.484834828497538,24973.894120134002,83.69999999999999,35.67078040618616
+
+
+
+ 	

@@ -1,0 +1,53 @@
+desc: error1
+mode: full
+features:
+  ERROR: 
+    - file: testsFiles/base.frd
+      option: "-o boop"
+      result: "Invalid Option -o boop (or --output boop) is not recognized"
+    - file: testsFiles/errors/base.frd
+      option: "-o "
+      result: "Invalid Option -o (or --output) is missing a parameter"
+    - file: testsFiles/errors/base.frd
+      metadata: "boop"
+      result: "Invalid Option -m boop (or --metadata boop) is not a valid metadata"
+    - file: a.frd
+      result: "MISSING_FILE - a.frd"
+    - file: c.frd a.frd b.frd
+      result: "MISSING_FILE - a.frd b.frd c.frd"
+    - file: testsFiles/encoding.frd
+      result: "ENCODING - ./Generated/encoding.frd"
+    - file: testsFiles/encoding.frd testsFiles/decoding.frd
+      result: "ENCODING - ./Generated/decoding.frd ./Generated/encoding.frd"
+    - file: testsFiles/corrupted.frd
+      result: "CORRUPTED - ./Generated/corrupted.frd"
+    - file: testsFiles/decorrupted.frd testsFiles/corrupted.frd
+      result: "CORRUPTED - ./Generated/corrupted.frd ./Generated/decorrupted.frd"
+    - file: testsFiles/missing_header.frd
+      result: "MISSING_HEADER - ./Generated/missing_header.frd"
+    - file: testsFiles/missing_header.frd testsFiles/missing_header2.frd
+      result: "MISSING_HEADER - ./Generated/missing_header.frd ./Generated/missing_header2.frd"
+    - file: testsFiles/incomplete_header.frd
+      result: "INCOMPLETE_HEADER - ./Generated/incomplete_header.frd=[origin]"
+    - file: testsFiles/incomplete_header.frd testsFiles/incomplete_header2.frd
+      result: "INCOMPLETE_HEADER - ./Generated/incomplete_header.frd=[origin] ./Generated/incomplete_header2.frd=[to]"
+    - file: testsFiles/incomplete_header.frd testsFiles/incomplete_header2.frd testsFiles/incomplete_header3.frd
+      result: "INCOMPLETE_HEADER - ./Generated/incomplete_header.frd=[origin] ./Generated/incomplete_header2.frd=[to] ./Generated/incomplete_header3.frd=[flight id, from, motor(s)]"
+    - file: testsFiles/incomplete_header.frd testsFiles/incomplete_header2.frd testsFiles/incomplete_header3.frd testsFiles/incomplete_header4.frd
+      result: "INCOMPLETE_HEADER - ./Generated/incomplete_header.frd=[origin] ./Generated/incomplete_header2.frd=[to] ./Generated/incomplete_header3.frd=[flight id, from, motor(s)] ./Generated/incomplete_header4.frd=[origin, to, flight id, from, motor(s)]"
+    - file: testsFiles/missing_column1.frd
+      result: "MISSING_COLUMN - ./Generated/missing_column1.frd=[longitude]"
+    - file: testsFiles/missing_column1.frd testsFiles/missing_column2.frd
+      result: "MISSING_COLUMN - ./Generated/missing_column1.frd=[longitude] ./Generated/missing_column2.frd=[air_speed]"
+    - file: testsFiles/missing_column1.frd testsFiles/missing_column2.frd testsFiles/missing_column3.frd
+      result: "MISSING_COLUMN - ./Generated/missing_column1.frd=[longitude] ./Generated/missing_column2.frd=[air_speed] ./Generated/missing_column3.frd=[humidity_in,pressure_in,temperature_in]"
+    - file: testsFiles/missing_colnames.frd
+      result: "MISSING_COLNAMES - ./Generated/missing_colnames.frd"
+    - file: testsFiles/missing_colnames.frd testsFiles/amissing_colnames.frd
+      result: "MISSING_COLNAMES - ./Generated/amissing_colnames.frd ./Generated/missing_colnames.frd"
+    - file: testsFiles/ordering.frd
+      result: "ORDERING - ./Generated/ordering.frd"
+    - file: testsFiles/ordering.frd testsFiles/aordering.frd
+      result: "ORDERING - ./Generated/aordering.frd ./Generated/ordering.frd"
+    
+
